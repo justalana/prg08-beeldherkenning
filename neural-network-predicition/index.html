@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekenen met NGT Getallen</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer type="module" src="./script.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+</head>
+
+<body>
+<main class="container">
+    <h1>Rekenen met Handgebaren</h1>
+
+    <section class="game-section">
+        <div id="question" class="question"></div>
+        <div id="feedback" class="feedback"></div>
+    </section>
+
+    <section class="controls">
+        <input type="text" id="labelInput" placeholder="Trainingslabel (1 t/m 10)" />
+        <div class="button-row">
+            <button id="webcamButton">Start Webcam</button>
+            <button id="classifyButton">Herken Gebaar</button>
+            <button id="logButton">Log Gebaar</button>
+            <button id="saveGesture">Download Data</button>
+        </div>
+    </section>
+
+    <div class="videoView">
+        <video id="webcam" muted autoplay playsinline></video>
+        <canvas id="output_canvas"></canvas>
+    </div>
+
+    <section class="info-section">
+        <h2>Over deze app</h2>
+        <p>Deze applicatie helpt je oefenen met rekenen en NGT getallen. De AI is getraind om gebaren van 1 t/m 10 te herkennen met behulp van een webcam</p>
+
+        <h2>Hoe werkt het?</h2>
+        <ol>
+            <li>Klik op <strong>Start Webcam</strong> om je camera aan te zetten.</li>
+            <li>Je krijgt een rekensom in beeld.</li>
+            <li>Maak met je hand het gebaar voor het juiste antwoord.</li>
+            <li>Klik op <strong>Herken Gebaar</strong> om je antwoord te laten controleren.</li>
+            <li>Je krijgt direct feedback of je gebaar klopt!</li>
+        </ol>
+    </section>
+
+</main>
+</body>
+
+</html>
